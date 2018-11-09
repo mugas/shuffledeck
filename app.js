@@ -2,13 +2,13 @@ new Vue({
   el: "#app",
   data: {
     ranks: ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"],
-    suits: ["♥", "♦", "♠", "♣"],
+    suits: ["♥", "♦", "♣", "♠"],
     cards: [],
     suitColor: {
-      "#": "red",
-      "@": "black",
-      "&": "red",
-      "*": "red"
+      "♥": "black",
+      "♦": "black",
+      "♣": "red",
+      "♠": "red"
     }
   },
   created() {
@@ -29,6 +29,16 @@ new Vue({
           this.cards.push(card);
           id++;
         }
+      }
+    },
+    shuffleDeck() {
+      for (let m = this.cards.length - 1; m > 0; m--) {
+        let randomIndex = Math.floor(Math.random() * m);
+
+        let temp = this.card[m];
+
+        Vue.set(this.cards, m, this.cards[randomIndex]);
+        Vue.set(this.cards, randomIndex, temp);
       }
     }
   }

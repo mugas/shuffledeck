@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Vue js</title>
+    <meta http-equiv="Content-Type" content="text/html" ; charset=utf-8">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <title>Vue js</title>
-  <meta http-equiv="Content-Type" content="text/html" ; charset=utf-8">
-  <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <div id="app">
-    <h1 class="title">
-      <img class="vue-logo" src="https://vuejs.org/images/logo.png" />
-      Card Shuffling
-    </h1>
-    <div class="deck">
-      <div v-for="card in cards" :key="card.id" class="card" :class="suitColor[card.suit]">
-        <span class="card__suit card__suit--top">{{ card.suit }}</span>
-        <span class="card__number">{{ card.rank }}</span>
-        <span class="card__suit card__suit--bottom">{{ card.suit }}</span>
+  <body>
+    <div id="app">
+      <h1 class="title">
+        <img class="vue-logo" src="https://vuejs.org/images/logo.png" /> Card
+        Shuffling
+      </h1>
+      <div class="main-buttons">
+        <button @click="shuffleDeck" class="button is-primary">
+          Shuffle <i class="fas fa-random"></i>
+        </button>
+      </div>
+      <div class="deck">
+        <div
+          v-for="card in cards"
+          :key="card.id"
+          class="card"
+          :class="suitColor[card.suit]"
+        >
+          <span class="card__suit card__suit--top">{{ card.suit }}</span>
+          <span class="card__number">{{ card.rank }}</span>
+          <span class="card__suit card__suit--bottom">{{ card.suit }}</span>
+        </div>
       </div>
     </div>
-  </div>
 
-
-
-
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="app.js"></script>
-</body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
