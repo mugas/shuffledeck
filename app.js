@@ -1,16 +1,32 @@
 new Vue({
   el: "#app",
   data: {
-    ranks: ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"],
-    suits: ["&", "%", ")", "#"],
+    ranks: [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "J",
+      "Q",
+      "K",
+      "A"
+    ],
+    suits: ["7", "5", "9", "1"],
     cards: [],
     suitColor: {
-      "&": "black",
-      "%": "black",
-      ")": "red",
-      "#": "red"
+      "7": "clubs",
+      "5": "spades",
+      "9": "hearts",
+      "1": "diamonds"
     },
-    shuffleSpeed: "shuffleMedium"
+    shuffleSpeed: "shuffleMedium",
+    isDeckShuffled: false
   },
   created() {
     this.displayInitialDeck();
@@ -31,6 +47,7 @@ new Vue({
           id++;
         }
       }
+      this.isDeckShuffled = false;
     },
     shuffleDeck() {
       for (let i = this.cards.length - 1; i > 0; i--) {
@@ -41,6 +58,7 @@ new Vue({
         Vue.set(this.cards, i, this.cards[randomIndex]);
         Vue.set(this.cards, randomIndex, temp);
       }
+      this.isDeckShuffled = true;
     }
   }
 });

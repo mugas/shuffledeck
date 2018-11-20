@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Paaji");
 
 html,
 body,
@@ -87,12 +88,30 @@ body,
   text-align: center;
 }
 
-.red {
+.hearts {
   color: #ff0000;
+  background-image: url("https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f53bc37ff31a9c27b92bb869ccc05a5e&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.diamonds {
+  color: #ff0000;
+  background-image: url("https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c8df2caeb47cf27eae792735019e072f&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.black {
+.clubs {
   color: #000;
+  background-image: url("https://images.unsplash.com/photo-1511689774932-3aca18459e68?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=17128790fb88a4840aba3dd16abeb2f7&auto=format&fit=crop&w=500&q=60");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.spades {
+  color: #000;
+  background-image: url("https://images.unsplash.com/photo-1514621166532-aa7eb1a3a2f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1ab428e21d89e5fc9eb58c31273c3751&auto=format&fit=crop&w=500&q=60");
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .twitter-section {

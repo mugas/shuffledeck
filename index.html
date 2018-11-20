@@ -46,6 +46,13 @@
         </button>
       </div>
       <div class="main-buttons">
+        <button
+          v-if="isDeckShuffled"
+          @click="displayInitialDeck"
+          class="button is-primary is-outlined"
+        >
+          Reset<i class="fas fa-undo"></i>
+        </button>
         <button @click="shuffleDeck" class="button is-primary">
           Shuffle <i class="fas fa-random"></i>
         </button>
