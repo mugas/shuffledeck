@@ -31,24 +31,24 @@ new Vue({
   created() {
     this.displayInitialDeck();
   },
-  methods: {
-    displayInitialDeck() {
-      let id = 1;
-      this.cards = [];
+    methods: {
+      displayInitialDeck() {
+        let id = 1;
+        this.cards = [];
 
-      for (let s = 0; s < this.suits.length; s++) {
-        for (let r = 0; r < this.ranks.length; r++) {
-          let card = {
-            id: id,
-            rank: this.ranks[r],
-            suit: this.suits[s]
-          };
-          this.cards.push(card);
-          id++;
+        for (let s = 0; s < this.suits.length; s++) {
+          for (let r = 0; r < this.ranks.length; r++) {
+            let card = {
+              id: id,
+              rank: this.ranks[r],
+              suit: this.suits[s]
+            };
+            this.cards.push(card);
+            id++;
+          }
         }
-      }
-      this.isDeckShuffled = false;
-    },
+        this.isDeckShuffled = false;
+      },
     shuffleDeck() {
       for (let i = this.cards.length - 1; i > 0; i--) {
         let randomIndex = Math.floor(Math.random() * i);
