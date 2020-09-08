@@ -59,7 +59,7 @@ ___
 
 # Support
 
-Have any question or find something that doesn't look good? Let's talk 😊
+Have any questions or find something that doesn't look good? Let's talk 😊
 
 [Here](https://github.com/mugas)
 
