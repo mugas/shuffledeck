@@ -49,7 +49,7 @@ ____
 
 Home Page         |  Blog Page
 :-------------------------:|:-------------------------:
-![](assets/screenshot.png)  |  ![](assets/screenshot1.png)
+![](assets/firstpic.png)  |  ![](assets/secondpic.png)
 
 ____
 
